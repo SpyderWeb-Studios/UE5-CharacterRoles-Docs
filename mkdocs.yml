@@ -1,0 +1,12 @@
+site_name: Multiplayer Character Roles
+site_author: Spyderweb Studios Ltd
+site_favicon: "/assets/Logos/SpyderwebLogo.png"
+
+theme:
+  name: readthedocs
+  nav_style: dark
+  logo: "/assets/Logos/SpyderwebBanner.png"
+
+
+plugins:
+  - awesome-pages
