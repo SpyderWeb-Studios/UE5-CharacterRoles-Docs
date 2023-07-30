@@ -9,15 +9,14 @@ If you are new to this plugin and want to get setup, please refer to the [Quick 
 
 Below, there is some documentation to help you get use the plugin
 
-## C++ Classes
+## Classes
 
-- [`Character Register Component`](Documentation/C%2B%2BClasses/Components/CharacterRegisterComponent.md)
-- [`Character Role Manager Component`](Documentation/C%2B%2BClasses/Components/CharacterRoleManagerComponent.md)
-- [`Character Role Component`](Documentation/C%2B%2BClasses/Components/CharacterRoleComponent.md))
-
-## Blueprint Classes
-
-
+- Components
+    * [`Character Register Component`](Documentation/C%2B%2BClasses/Components/CharacterRegisterComponent.md)
+    * [`Character Role Manager Component`](Documentation/C%2B%2BClasses/Components/CharacterRoleManagerComponent.md)
+    * [`Character Role Component`](Documentation/C%2B%2BClasses/Components/CharacterRoleComponent.md)
+- Interfaces
+    * [`ICharacterRoleManagementInterface`](Documentation/C%2B%2BClasses/Interfaces/ICharacterRoleManagementInterface.md)
 
 
 Please see our [Plugin Roadmap](PluginRoadmap.md) to know what we have planned for the future and what you can expect from us in the coming months. 

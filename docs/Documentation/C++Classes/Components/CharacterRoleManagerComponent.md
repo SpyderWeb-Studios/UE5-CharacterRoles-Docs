@@ -36,6 +36,37 @@ We came up with an algorithm that accomplishes all of these challenges. Dependin
 
 When all the roles have been chosen for each [`CharacterRegisterComponent`](CharacterRegisterComponent.md), a final iteration is performed which is where the actual assignment is performed. Please see the [`CharacterRegisterComponent`](CharacterRegisterComponent.md) for further detail, but the short version is that a [`CharacterRoleComponent`](CharacterRoleComponent.md) of the relevant class is created and attached to the owner of the [`CharacterRegisterComponent`](CharacterRegisterComponent.md). 
 
+To actually trigger the Assignment, all you need to do is call this:
+```c++
+	UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, Category = "Character Role Manager")
+	void AssignCharacterRoles();
+```
+
+Similarly, to Clear the Assigned Roles, you will need to call:
+
+```c++
+	UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, Category = "Character Role Manager")
+	void ClearCharacterRoles();
+```
+
+
 ## Verifying Win and Lose Conditions
 
 These are 2 separate functions, that each check each element in the `RegisteredCharacterRoleComponents` for their respective check. A [`CharacterRoleComponent`](CharacterRoleComponent.md) defines their own Win and Lose Condition functions (that can be implemented in C++ or Blueprint) and all this function does is check if any return true. If any do return true, then it calls OnCharacterRoleWinConditionMet or OnCharacterRoleLoseConditionMet respectively and continues onto the next in the list. This is to make sure that every role that has met their condition gets the correct outcome.  
+
+To control when you check the conditions, all you need to do is call these: 
+```c++
+	
+    /**
+	 * @brief Iterates through all registered CharacterRoleComponents and verifies their win conditions
+	 */
+	UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, Category = "Character Role Manager")
+	void VerifyWinConditions();
+
+	/**
+	 * @brief Iterates through all registered CharacterRoleComponents and verifies their lose conditions
+	 */
+	UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, Category = "Character Role Manager")
+	void VerifyLoseConditions();
+
+```

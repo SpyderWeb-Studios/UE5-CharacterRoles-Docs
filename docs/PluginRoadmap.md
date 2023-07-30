@@ -21,3 +21,4 @@ This is what we have planned for the future of this plugin. We aim to have a LTS
 
 - Integrate Gameplay Ability System into the system to allow different Roles to have different abilities automatically
 - Have a Role Priority attribute to the CharacterRole Struct to allow designers and players more control over the Assignment process
+- Allow Roles to be assigned dynamically, so new players joining halfway into the match could be assigned a role without requiring reassignment to all Registered components.
